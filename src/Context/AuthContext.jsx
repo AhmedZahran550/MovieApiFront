@@ -5,8 +5,7 @@ import { useMemo } from 'react';
 export const AuthContext = createContext(null)
 export default function AuthContextProvider(props) {
   const [user, setUser] = useState(null);
-  
-const  saveUser = () => {
+  const  saveUser = () => {
     const decoded = jwtDecode(JSON.stringify(localStorage.getItem("token")));
      setUser(decoded);
     };
